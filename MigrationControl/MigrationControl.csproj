@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <AssemblyName>MigrationControl</AssemblyName>
+    <RootNamespace>MigrationControl</RootNamespace>
+    <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NoStdLib>true</NoStdLib>
+
+    <!-- Override on the command line: dotnet build -p:TimberbornPath="D:\...\Timberborn" -->
+    <TimberbornPath Condition="'$(TimberbornPath)' == ''">C:\games\Timberborn.v1.1\Timberborn</TimberbornPath>
+    <ManagedPath>$(TimberbornPath)\Timberborn_Data\Managed</ManagedPath>
+    <ModsPath Condition="'$(ModsPath)' == ''">$(USERPROFILE)\Documents\Timberborn\Mods</ModsPath>
+    <HarmonyDll Condition="'$(HarmonyDll)' == ''">$(ModsPath)\harmony_4149561_2.4.1\0Harmony.dll</HarmonyDll>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(ManagedPath)\netstandard.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\mscorlib.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\System.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\System.Core.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\System.Collections.Immutable.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\Bindito.Core.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\UnityEngine.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\UnityEngine.UIElementsModule.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\UnityEngine.InputLegacyModule.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="$(ManagedPath)\Timberborn.*.dll" Private="false" />
+    <Reference Include="$(HarmonyDll)" Private="false" />
+  </ItemGroup>
+
+  <!-- After building, lay out the mod folder and copy it into the game's Mods directory. -->
+  <Target Name="PackageMod" AfterTargets="Build">
+    <PropertyGroup>
+      <ModOut>$(MSBuildProjectDirectory)\dist\MigrationControl</ModOut>
+    </PropertyGroup>
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModOut)\Scripts" />
+    <Copy SourceFiles="manifest.json;README.md" DestinationFolder="$(ModOut)" />
+  </Target>
+
+</Project>
