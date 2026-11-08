@@ -1,0 +1,11 @@
+{
+  "Name": "Population Control",
+  "Version": "1.0.0",
+  "Id": "Panda.PopulationControl",
+  "MinimumGameVersion": "1.0.0.0",
+  "Description": "Per-district filters for who migrates: oldest or youngest first, minimum/maximum age, protect employed workers, homeless first, and a per-beaver/bot \"Never migrate\" pin. Works with the manual 1 / 10 / all migration buttons, and optionally with automatic migration. New districts behave exactly like the base game until you change something.",
+  "RequiredMods": [
+    { "Id": "Harmony" }
+  ],
+  "OptionalMods": []
+}
