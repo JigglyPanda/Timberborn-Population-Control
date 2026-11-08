@@ -1,7 +1,7 @@
 using Timberborn.QuickNotificationSystem;
 using Timberborn.SingletonSystem;
 
-namespace MigrationControl
+namespace PopulationControl
 {
     /// <summary>Shows a short on-screen message when a manual migration moved fewer citizens than asked.</summary>
     public class MigrationNotifier : ILoadableSingleton, IUnloadableSingleton

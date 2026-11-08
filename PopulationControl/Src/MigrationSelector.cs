@@ -7,7 +7,7 @@ using Timberborn.DwellingSystem;
 using Timberborn.GameDistricts;
 using Timberborn.WorkSystem;
 
-namespace MigrationControl
+namespace PopulationControl
 {
     /// <summary>
     /// Decides which citizens leave a district. With default settings the ordering is identical to

@@ -3,7 +3,7 @@ using Timberborn.Characters;
 using Timberborn.Persistence;
 using Timberborn.WorldPersistence;
 
-namespace MigrationControl
+namespace PopulationControl
 {
     /// <summary>
     /// "Never migrate" flag on an individual beaver or bot. Pinned citizens are skipped by
@@ -11,7 +11,7 @@ namespace MigrationControl
     /// </summary>
     public class MigrationPin : BaseComponent, IPersistentEntity, IChildhoodInfluenced
     {
-        private static readonly ComponentKey PinKey = new ComponentKey("MigrationControl.Pin");
+        private static readonly ComponentKey PinKey = new ComponentKey("PopulationControl.Pin");
         private static readonly PropertyKey<bool> PinnedKey = new PropertyKey<bool>("Pinned");
 
         public bool Pinned { get; set; }

@@ -3,7 +3,7 @@ using Timberborn.CoreUI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MigrationControl.UI
+namespace PopulationControl.UI
 {
     /// <summary>
     /// Builds UI elements in code using the game's own USS classes, so the panel looks native.

@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>9.0</LangVersion>
-    <AssemblyName>MigrationControl</AssemblyName>
-    <RootNamespace>MigrationControl</RootNamespace>
+    <AssemblyName>PopulationControl</AssemblyName>
+    <RootNamespace>PopulationControl</RootNamespace>
     <Nullable>disable</Nullable>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -38,7 +38,7 @@
   <!-- After building, lay out the mod folder and copy it into the game's Mods directory. -->
   <Target Name="PackageMod" AfterTargets="Build">
     <PropertyGroup>
-      <ModOut>$(MSBuildProjectDirectory)\dist\MigrationControl</ModOut>
+      <ModOut>$(MSBuildProjectDirectory)\dist\PopulationControl</ModOut>
     </PropertyGroup>
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModOut)\Scripts" />
     <Copy SourceFiles="manifest.json;README.md" DestinationFolder="$(ModOut)" />

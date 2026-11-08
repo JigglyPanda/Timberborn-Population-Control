@@ -1,13 +1,13 @@
 using Bindito.Core;
-using MigrationControl.UI;
+using PopulationControl.UI;
 using Timberborn.EntityPanelSystem;
 using Timberborn.GameDistricts;
 using Timberborn.TemplateInstantiation;
 
-namespace MigrationControl
+namespace PopulationControl
 {
     [Context("Game")]
-    internal class MigrationControlConfigurator : Configurator
+    internal class PopulationControlConfigurator : Configurator
     {
         protected override void Configure()
         {

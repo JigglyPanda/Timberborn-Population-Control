@@ -1,6 +1,6 @@
 using Timberborn.Persistence;
 
-namespace MigrationControl
+namespace PopulationControl
 {
     public enum PopulationGroup
     {

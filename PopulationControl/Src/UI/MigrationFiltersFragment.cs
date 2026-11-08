@@ -6,7 +6,7 @@ using Timberborn.GameDistricts;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MigrationControl.UI
+namespace PopulationControl.UI
 {
     /// <summary>"Migration filters" section shown in every District Center's panel.</summary>
     internal class MigrationFiltersFragment : IEntityPanelFragment
@@ -52,7 +52,7 @@ namespace MigrationControl.UI
         {
             // Borrow the District Center fragment's layout: it carries the game's stylesheets and a green sub-panel.
             _root = _visualElementLoader.LoadVisualElement("Game/EntityPanel/DistrictCenterFragment");
-            _root.name = "MigrationControlFragment";
+            _root.name = "PopulationControlFragment";
             VisualElement box = _root.Q<VisualElement>("Migration");
             _root.Q<VisualElement>("WorkerType")?.RemoveFromHierarchy();
             box.Clear();

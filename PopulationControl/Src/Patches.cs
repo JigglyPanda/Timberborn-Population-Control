@@ -3,7 +3,7 @@ using HarmonyLib;
 using Timberborn.GameDistricts;
 using Timberborn.GameDistrictsMigration;
 
-namespace MigrationControl
+namespace PopulationControl
 {
     // Every migration (manual buttons AND automatic) ends up in one of these MigrateTo methods,
     // so patching them is enough to control who leaves.

@@ -3,7 +3,7 @@ using Timberborn.CoreUI;
 using Timberborn.EntityPanelSystem;
 using UnityEngine.UIElements;
 
-namespace MigrationControl.UI
+namespace PopulationControl.UI
 {
     /// <summary>"Never migrate" checkbox shown in a beaver's or bot's panel.</summary>
     internal class MigrationPinFragment : IEntityPanelFragment

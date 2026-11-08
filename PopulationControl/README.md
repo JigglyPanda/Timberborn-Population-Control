@@ -1,4 +1,4 @@
-# Migration Control (Timberborn 1.x)
+# Population Control (Timberborn 1.x)
 
 Choose **who** leaves a district when you migrate.
 
@@ -45,4 +45,4 @@ Contaminated beavers are not affected: the game's separate "contaminated" migrat
 ```
 dotnet build -c Release
 ```
-Set `-p:TimberbornPath=...` if the game isn't in `C:\games\Timberborn.v1.1\Timberborn`. The finished mod folder is in `dist\MigrationControl`.
+Set `-p:TimberbornPath=...` if the game isn't in `C:\games\Timberborn.v1.1\Timberborn`. The finished mod folder is in `dist\PopulationControl`.

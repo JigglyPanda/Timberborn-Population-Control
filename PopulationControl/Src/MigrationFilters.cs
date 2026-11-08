@@ -2,7 +2,7 @@ using Timberborn.BaseComponentSystem;
 using Timberborn.Persistence;
 using Timberborn.WorldPersistence;
 
-namespace MigrationControl
+namespace PopulationControl
 {
     /// <summary>
     /// Per-district migration rules, attached to every District Center and saved with the game.
@@ -10,7 +10,7 @@ namespace MigrationControl
     /// </summary>
     public class MigrationFilters : BaseComponent, IPersistentEntity
     {
-        private static readonly ComponentKey FiltersKey = new ComponentKey("MigrationControl.Filters");
+        private static readonly ComponentKey FiltersKey = new ComponentKey("PopulationControl.Filters");
         private static readonly PropertyKey<bool> ApplyToManualKey = new PropertyKey<bool>("ApplyToManual");
         private static readonly PropertyKey<bool> ApplyToAutomaticKey = new PropertyKey<bool>("ApplyToAutomatic");
 
